@@ -14,25 +14,59 @@
         font-family: 'Roboto', sans-serif;
       }
       main {
-        margin: 0 10px;
-        height: auto;
-        overflow: hidden;
-      }
-      #number {
-        font-size: 200px;
+        max-width: 800px;
         text-align: center;
       }
+      .center {
+        display: block;
+        margin: auto;
+      }
+      #container {
+        padding: 30px;
+      }
+      #number {
+        font-size: 15vw;
+      }
+      #description {
+        font-size: 5vw;
+      }
+      #bird-container {
+        margin: 30px;
+      }
+      #bird-container img {
+        width: 20%;
+      }
+      .bird-dance {
+        animation: birdDancing infinite 3s linear;
+      }
+      @keyframes birdDancing {
+
+      0% {
+        color: #000;
+        transform: rotate(0) translate3D(200%, -50%, 0);
+      }
+      30% {
+        color: #431236;
+      }
+      100% {
+        color: #000;
+        transform: rotate(360deg) translate3D(-200%, 0%, 0);
+      }
+    }
 
     </style>
   </head>
   <body>
-    <main>
-      <section>
-        <div id="alert">
-          <p id="number">404</p>
-          <p id="description"></p>
-        </div>
+    <main class="center">
+      <section class="center" id="container">
+        <p class="center" id="number">404</p>
+        <p class="center" id="description">That page couldn't be found</p>
       </section>
+      <figure class="center" id="bird-container">
+        <img class="bird-dance" src="birdbeintoo.png">
+        <img class="bird-dance" src="birdbeintoo.png">
+        <img class="bird-dance" src="birdbeintoo.png">
+      </figure>
     </main>
   </body>
 </html>
